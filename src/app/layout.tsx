@@ -21,7 +21,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className="scroll-pt-20 scroll-smooth">
       <body className={`font-sans ${inter.variable}`}>{children}</body>
     </html>
   );

@@ -27,6 +27,37 @@ export default function HomePage() {
               Crafting pixels and code, turning ideas into <br />
               interactive digital experiences
             </p>
+            <nav>
+              <ul className="mt-16 w-max">
+                <li>
+                  <a href="#about" className="group flex items-center py-3">
+                    <span className="mr-4 h-px w-8 bg-slate-600 transition-all group-hover:h-[2px] group-hover:w-16 group-hover:bg-slate-200"></span>
+                    <span className="text-sm font-semibold uppercase tracking-wider">
+                      about
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#experience"
+                    className="group flex items-center py-3"
+                  >
+                    <span className="mr-4 h-px w-8 bg-slate-600 transition-all group-hover:h-[2px] group-hover:w-16 group-hover:bg-slate-200"></span>
+                    <span className="text-sm font-semibold uppercase tracking-wider">
+                      experience
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#projects" className="group flex items-center py-3">
+                    <span className="mr-4 h-px w-8 bg-slate-600 transition-all group-hover:h-[2px] group-hover:w-16 group-hover:bg-slate-200"></span>
+                    <span className="text-sm font-semibold uppercase tracking-wider">
+                      projects
+                    </span>
+                  </a>
+                </li>
+              </ul>
+            </nav>
           </div>
           <ul className="flex items-center justify-start gap-4">
             <li className="cursor-pointer transition-all hover:text-slate-200">
@@ -70,13 +101,15 @@ export default function HomePage() {
             id="experience"
           >
             <div className="group/parent flex flex-col items-center justify-center gap-2 transition-all">
-              <div className="group/exp flex gap-4 rounded-lg p-4 opacity-100 transition-all hover:cursor-pointer hover:bg-slate-800 hover:!opacity-100 hover:shadow-lg group-hover/parent:opacity-50">
-                <p className="mt-1 flex-1 text-sm">2023 — Present</p>
+              <div className="group/exp flex gap-4 rounded-lg p-4 opacity-100 transition-all hover:cursor-pointer hover:bg-slate-800/50 hover:!opacity-100 hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] hover:drop-shadow-lg group-hover/parent:opacity-50">
+                <p className="mt-1 flex-1 text-sm font-semibold text-slate-500">
+                  2023 — Present
+                </p>
                 <div className="flex flex-[3] flex-col gap-2">
                   <h2 className="font-semibold text-slate-200 transition-colors group-hover/exp:text-teal-300">
                     Fullstack Developer · Midas Daya Teknologi
                   </h2>
-                  <p>
+                  <p className="text-sm">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Dolorum facere optio, eum amet beatae placeat nobis id.
                     Neque, asperiores veniam? Fugit odit qui voluptatibus
@@ -104,13 +137,15 @@ export default function HomePage() {
                   </ul>
                 </div>
               </div>
-              <div className="group/exp flex gap-4 rounded-lg p-4 opacity-100 transition-all hover:cursor-pointer hover:bg-slate-800 hover:!opacity-100 group-hover/parent:opacity-50">
-                <p className="mt-1 flex-1 text-sm">2022 — 2023</p>
+              <div className="group/exp flex gap-4 rounded-lg p-4 opacity-100 transition-all hover:cursor-pointer hover:bg-slate-800/50 hover:!opacity-100 hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] hover:drop-shadow-lg group-hover/parent:opacity-50">
+                <p className="mt-1 flex-1 text-sm font-semibold text-slate-500">
+                  2022 — 2023
+                </p>
                 <div className="flex flex-[3] flex-col gap-2">
-                  <h2 className="font-semibold text-slate-200 transition-colors group-hover:text-teal-300">
+                  <h2 className="font-semibold text-slate-200 transition-colors group-hover/exp:text-teal-300">
                     Frontend Developer · Sagara Technology
                   </h2>
-                  <p>
+                  <p className="text-sm">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Dolorum facere optio, eum amet beatae placeat nobis id.
                     Neque, asperiores veniam? Fugit odit qui voluptatibus
@@ -148,8 +183,8 @@ export default function HomePage() {
             id="projects"
           >
             <div className="group/parent flex flex-col items-center justify-center gap-2 transition-all">
-              <div className="group/exp flex gap-4 rounded-lg p-4 opacity-100 transition-all hover:cursor-pointer hover:bg-slate-800 hover:!opacity-100 hover:shadow-lg group-hover/parent:opacity-50">
-                <div className="relative mt-1 h-1/3 w-full flex-1 overflow-hidden rounded border-2 border-slate-700 group-hover/exp:border-slate-400">
+              <div className="group/proj flex gap-4 rounded-lg p-4 opacity-100 transition-all hover:cursor-pointer hover:bg-slate-800/50 hover:!opacity-100 hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] hover:drop-shadow-lg group-hover/parent:opacity-50">
+                <div className="relative mt-1 h-1/3 w-full flex-1 overflow-hidden rounded border-2 border-slate-700 group-hover/proj:border-slate-400">
                   <Image
                     src={"/projects/notes1.jpg"}
                     alt="personal notes"
@@ -158,10 +193,10 @@ export default function HomePage() {
                   />
                 </div>
                 <div className="flex flex-[3] flex-col gap-2">
-                  <h2 className="font-semibold text-slate-200 transition-colors group-hover/exp:text-teal-300">
+                  <h2 className="font-semibold text-slate-200 transition-colors group-hover/proj:text-teal-300">
                     Fullstack Developer · Midas Daya Teknologi
                   </h2>
-                  <p>
+                  <p className="text-sm">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Dolorum facere optio, eum amet beatae placeat nobis id.
                     Neque, asperiores veniam? Fugit odit qui voluptatibus
@@ -189,8 +224,8 @@ export default function HomePage() {
                   </ul>
                 </div>
               </div>
-              <div className="group/exp flex gap-4 rounded-lg p-4 opacity-100 transition-all hover:cursor-pointer hover:bg-slate-800 hover:!opacity-100 group-hover/parent:opacity-50">
-                <div className="relative mt-1 h-1/3 w-full flex-1 overflow-hidden rounded border-2 border-slate-700 group-hover/exp:border-slate-400">
+              <div className="group/proj flex gap-4 rounded-lg p-4 opacity-100 transition-all hover:cursor-pointer hover:bg-slate-800/50 hover:!opacity-100 hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] hover:drop-shadow-lg group-hover/parent:opacity-50">
+                <div className="relative mt-1 h-1/3 w-full flex-1 overflow-hidden rounded border-2 border-slate-700 group-hover/proj:border-slate-400">
                   <Image
                     src={"/projects/music1.jpg"}
                     alt="music player"
@@ -199,10 +234,10 @@ export default function HomePage() {
                   />
                 </div>
                 <div className="flex flex-[3] flex-col gap-2">
-                  <h2 className="font-semibold text-slate-200 transition-colors group-hover:text-teal-300">
+                  <h2 className="font-semibold text-slate-200 transition-colors group-hover/proj:text-teal-300">
                     Frontend Developer · Sagara Technology
                   </h2>
-                  <p>
+                  <p className="text-sm">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Dolorum facere optio, eum amet beatae placeat nobis id.
                     Neque, asperiores veniam? Fugit odit qui voluptatibus
