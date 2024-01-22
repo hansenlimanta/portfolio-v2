@@ -1,31 +1,13 @@
 "use client";
 
-import MouseHover from "~/components/MouseHover";
-import {
-  AiOutlineInstagram,
-  AiOutlineLinkedin,
-  AiOutlineGithub,
-  AiOutlineMail,
-} from "react-icons/ai";
-import { MdArrowOutward } from "react-icons/md";
 import Image from "next/image";
-import useWindowPosition from "~/utils/useWindowPosition";
-import { useEffect, useState } from "react";
-import { projectsData } from "~/utils/data";
+import { MdArrowOutward } from "react-icons/md";
+import { experienceData, projectsData } from "~/utils/data";
+import MouseHover from "~/components/MouseHover";
+import Navigation from "~/components/Navigation";
+import SocialLinks from "~/components/SocialLinks";
 
 export default function HomePage() {
-  const [scrollMark, setScrollMark] = useState(0);
-  const windowPosition = useWindowPosition();
-  useEffect(() => {
-    console.log("test", windowPosition);
-    if (windowPosition < 480) {
-      setScrollMark(0);
-    } else if (windowPosition < 1152) {
-      setScrollMark(1);
-    } else {
-      setScrollMark(2);
-    }
-  }, [windowPosition]);
   return (
     <div className="relative flex min-h-screen flex-col items-center justify-start bg-slate-900 text-slate-400">
       <MouseHover />
@@ -42,88 +24,9 @@ export default function HomePage() {
               Crafting pixels and code, turning ideas into <br />
               interactive digital experiences
             </p>
-            <nav className="nav hidden lg:block">
-              <ul className="mt-16 w-max">
-                <li>
-                  <a href="#about" className="group flex items-center py-3">
-                    <span
-                      className={`mr-4 h-px w-8 bg-slate-600 transition-all group-hover:h-[2px] group-hover:w-16 group-hover:bg-slate-200 group-focus-visible:h-[2px] group-focus-visible:w-16 group-focus-visible:bg-slate-200 ${scrollMark === 0 ? "h-[2px] w-16 bg-slate-200" : "h-px w-8 bg-slate-600"}`}
-                    ></span>
-                    <span
-                      className={`text-sm font-semibold uppercase tracking-wider group-hover:text-slate-200 group-focus-visible:text-slate-200 ${scrollMark === 0 ? "text-slate-200" : "text-slate-600"}`}
-                    >
-                      about
-                    </span>
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#experience"
-                    className="group flex items-center py-3"
-                  >
-                    <span
-                      className={`mr-4 h-px w-8 bg-slate-600 transition-all group-hover:h-[2px] group-hover:w-16 group-hover:bg-slate-200 group-focus-visible:h-[2px] group-focus-visible:w-16 group-focus-visible:bg-slate-200 ${scrollMark === 1 ? "h-[2px] w-16 bg-slate-200" : "h-px w-8 bg-slate-600"}`}
-                    ></span>
-                    <span
-                      className={`text-sm font-semibold uppercase tracking-wider group-hover:text-slate-200 group-focus-visible:text-slate-200 ${scrollMark === 1 ? "text-slate-200" : "text-slate-600"}`}
-                    >
-                      experience
-                    </span>
-                  </a>
-                </li>
-                <li>
-                  <a href="#projects" className="group flex items-center py-3">
-                    <span
-                      className={`mr-4 h-px w-8 bg-slate-600 transition-all group-hover:h-[2px] group-hover:w-16 group-hover:bg-slate-200 group-focus-visible:h-[2px] group-focus-visible:w-16 group-focus-visible:bg-slate-200 ${scrollMark === 2 ? "h-[2px] w-16 bg-slate-200" : "h-px w-8 bg-slate-600"}`}
-                    ></span>
-                    <span
-                      className={`text-sm font-semibold uppercase tracking-wider group-hover:text-slate-200 group-focus-visible:text-slate-200 ${scrollMark === 2 ? "text-slate-200" : "text-slate-600"}`}
-                    >
-                      projects
-                    </span>
-                  </a>
-                </li>
-              </ul>
-            </nav>
+            <Navigation />
           </div>
-          <ul className="flex items-center justify-start gap-4">
-            <li className="cursor-pointer transition-all hover:text-slate-200">
-              <a
-                href="https://github.com/hansenlimanta"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <AiOutlineGithub size={30} />
-              </a>
-            </li>
-            <li className="cursor-pointer transition-all hover:text-slate-200">
-              <a
-                href="https://www.linkedin.com/in/hansenlimanta/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <AiOutlineLinkedin size={30} />
-              </a>
-            </li>
-            <li className="cursor-pointer transition-all hover:text-slate-200">
-              <a
-                href="https://www.instagram.com/hansen_limanta/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <AiOutlineInstagram size={30} />
-              </a>
-            </li>
-            <li className="cursor-pointer transition-all hover:text-slate-200">
-              <a
-                href="mailto:hansenlimanta@gmail.com"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <AiOutlineMail size={30} />
-              </a>
-            </li>
-          </ul>
+          <SocialLinks />
         </header>
         <main className="flex w-1/2 flex-col gap-4 py-20 ">
           <section className="mb-32 flex flex-col gap-3 px-4" id="about">
@@ -157,83 +60,31 @@ export default function HomePage() {
             id="experience"
           >
             <div className="group/parent flex flex-col items-center justify-center gap-2 transition-all">
-              <div className="group/exp flex gap-4 rounded-lg p-4 opacity-100 transition-all hover:cursor-pointer hover:bg-slate-800/50 hover:!opacity-100 hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] hover:drop-shadow-lg group-hover/parent:opacity-50">
-                <p className="mt-1 flex-1 text-sm font-semibold text-slate-500">
-                  2023 — Present
-                </p>
-                <div className="flex flex-[3] flex-col gap-2">
-                  <h2 className="font-semibold text-slate-200 transition-colors group-hover/exp:text-teal-300">
-                    Fullstack Developer · Midas Daya Teknologi
-                  </h2>
-                  <p className="text-sm">
-                    As a Midas Daya Teknologi employee at Bank Muamalat
-                    Indonesia, I develop and maintain the branch delivery system
-                    using Vue.js and Java Spring Boot. I create clean, modular,
-                    and testable code for both frontend and backend, promptly
-                    addressing bugs and performance issues. Staying current with
-                    the latest technologies and best practices, I contribute to
-                    the success and innovation of Bank Muamalat Indonesia.
+              {experienceData.map((exp) => (
+                <a
+                  href={exp.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group/exp flex gap-4 rounded-lg p-4 opacity-100 transition-all hover:cursor-pointer hover:bg-slate-800/50 hover:!opacity-100 hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] hover:drop-shadow-lg group-hover/parent:opacity-50"
+                >
+                  <p className="mt-1 flex-1 text-sm font-semibold text-slate-500">
+                    {exp.date}
                   </p>
-                  <ul className="flex flex-wrap gap-2 ">
-                    <li className="rounded-full bg-teal-400/10 px-3 py-1 text-xs text-teal-300">
-                      Vue
-                    </li>
-                    <li className="rounded-full bg-teal-400/10 px-3 py-1 text-xs text-teal-300">
-                      Vuetify
-                    </li>
-                    <li className="rounded-full bg-teal-400/10 px-3 py-1 text-xs text-teal-300">
-                      Java
-                    </li>
-                    <li className="rounded-full bg-teal-400/10 px-3 py-1 text-xs text-teal-300">
-                      Springboot
-                    </li>
-                    <li className="rounded-full bg-teal-400/10 px-3 py-1 text-xs text-teal-300">
-                      Vuex
-                    </li>
-                    <li className="rounded-full bg-teal-400/10 px-3 py-1 text-xs text-teal-300">
-                      Git
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div className="group/exp flex gap-4 rounded-lg p-4 opacity-100 transition-all hover:cursor-pointer hover:bg-slate-800/50 hover:!opacity-100 hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] hover:drop-shadow-lg group-hover/parent:opacity-50">
-                <p className="mt-1 flex-1 text-sm font-semibold text-slate-500">
-                  Oct — Dec 2022
-                </p>
-                <div className="flex flex-[3] flex-col gap-2">
-                  <h2 className="font-semibold text-slate-200 transition-colors group-hover/exp:text-teal-300">
-                    Frontend Developer · Sagara Technology
-                  </h2>
-                  <p className="text-sm">
-                    I developed and maintained Vue.js frontends, including the
-                    Sagara Foundation CSR site, showcasing expertise in scalable
-                    and user-friendly interfaces. Implemented mobile-responsive
-                    features for improved user experience, collaborating with
-                    back-end developers and designers to enhance overall
-                    usability.
-                  </p>
-                  <ul className="flex flex-wrap gap-2 ">
-                    <li className="rounded-full bg-teal-400/10 px-3 py-1 text-xs text-teal-300">
-                      React
-                    </li>
-                    <li className="rounded-full bg-teal-400/10 px-3 py-1 text-xs text-teal-300">
-                      MUI
-                    </li>
-                    <li className="rounded-full bg-teal-400/10 px-3 py-1 text-xs text-teal-300">
-                      React Hook Form
-                    </li>
-                    <li className="rounded-full bg-teal-400/10 px-3 py-1 text-xs text-teal-300">
-                      NextJS
-                    </li>
-                    <li className="rounded-full bg-teal-400/10 px-3 py-1 text-xs text-teal-300">
-                      Styled Component
-                    </li>
-                    <li className="rounded-full bg-teal-400/10 px-3 py-1 text-xs text-teal-300">
-                      Figma
-                    </li>
-                  </ul>
-                </div>
-              </div>
+                  <div className="flex flex-[3] flex-col gap-2">
+                    <h2 className="font-semibold text-slate-200 transition-colors group-hover/exp:text-teal-300">
+                      {exp.title}
+                    </h2>
+                    <p className="text-sm">{exp.desc}</p>
+                    <ul className="flex flex-wrap gap-2 ">
+                      {exp.tools.map((tool) => (
+                        <li className="rounded-full bg-teal-400/10 px-3 py-1 text-xs text-teal-300">
+                          {tool}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </a>
+              ))}
             </div>
             <a
               href="/resume.pdf"
@@ -249,7 +100,12 @@ export default function HomePage() {
           >
             <div className="group/parent flex flex-col items-center justify-center gap-2 transition-all">
               {projectsData.map((project) => (
-                <div className="group/proj flex gap-4 rounded-lg p-4 opacity-100 transition-all hover:cursor-pointer hover:bg-slate-800/50 hover:!opacity-100 hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] hover:drop-shadow-lg group-hover/parent:opacity-50">
+                <a
+                  href={project.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group/proj flex gap-4 rounded-lg p-4 opacity-100 transition-all hover:cursor-pointer hover:bg-slate-800/50 hover:!opacity-100 hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] hover:drop-shadow-lg group-hover/parent:opacity-50"
+                >
                   <div className="relative mt-1 h-20 w-full flex-1 overflow-hidden rounded border-2 border-slate-700 group-hover/proj:border-slate-400">
                     <Image
                       src={project.image}
@@ -271,7 +127,7 @@ export default function HomePage() {
                       ))}
                     </ul>
                   </div>
-                </div>
+                </a>
               ))}
             </div>
             <div className="mt-8 inline-flex w-fit cursor-pointer items-center justify-start gap-2 px-4 font-semibold text-slate-200 transition-colors hover:text-teal-300">
