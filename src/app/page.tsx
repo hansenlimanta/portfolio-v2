@@ -11,6 +11,7 @@ import { MdArrowOutward } from "react-icons/md";
 import Image from "next/image";
 import useWindowPosition from "~/utils/useWindowPosition";
 import { useEffect, useState } from "react";
+import { projectsData } from "~/utils/data";
 
 export default function HomePage() {
   const [scrollMark, setScrollMark] = useState(0);
@@ -49,7 +50,7 @@ export default function HomePage() {
                       className={`mr-4 h-px w-8 bg-slate-600 transition-all group-hover:h-[2px] group-hover:w-16 group-hover:bg-slate-200 group-focus-visible:h-[2px] group-focus-visible:w-16 group-focus-visible:bg-slate-200 ${scrollMark === 0 ? "h-[2px] w-16 bg-slate-200" : "h-px w-8 bg-slate-600"}`}
                     ></span>
                     <span
-                      className={`text-sm font-semibold uppercase tracking-wider group-hover:text-slate-200 group-focus-visible:text-slate-200 ${scrollMark === 0 ? "text-slate-200" : "text-slate-400"}`}
+                      className={`text-sm font-semibold uppercase tracking-wider group-hover:text-slate-200 group-focus-visible:text-slate-200 ${scrollMark === 0 ? "text-slate-200" : "text-slate-600"}`}
                     >
                       about
                     </span>
@@ -64,9 +65,8 @@ export default function HomePage() {
                       className={`mr-4 h-px w-8 bg-slate-600 transition-all group-hover:h-[2px] group-hover:w-16 group-hover:bg-slate-200 group-focus-visible:h-[2px] group-focus-visible:w-16 group-focus-visible:bg-slate-200 ${scrollMark === 1 ? "h-[2px] w-16 bg-slate-200" : "h-px w-8 bg-slate-600"}`}
                     ></span>
                     <span
-                      className={`text-sm font-semibold uppercase tracking-wider group-hover:text-slate-200 group-focus-visible:text-slate-200 ${scrollMark === 1 ? "text-slate-200" : "text-slate-400"}`}
+                      className={`text-sm font-semibold uppercase tracking-wider group-hover:text-slate-200 group-focus-visible:text-slate-200 ${scrollMark === 1 ? "text-slate-200" : "text-slate-600"}`}
                     >
-                      {" "}
                       experience
                     </span>
                   </a>
@@ -77,9 +77,8 @@ export default function HomePage() {
                       className={`mr-4 h-px w-8 bg-slate-600 transition-all group-hover:h-[2px] group-hover:w-16 group-hover:bg-slate-200 group-focus-visible:h-[2px] group-focus-visible:w-16 group-focus-visible:bg-slate-200 ${scrollMark === 2 ? "h-[2px] w-16 bg-slate-200" : "h-px w-8 bg-slate-600"}`}
                     ></span>
                     <span
-                      className={`text-sm font-semibold uppercase tracking-wider group-hover:text-slate-200 group-focus-visible:text-slate-200 ${scrollMark === 2 ? "text-slate-200" : "text-slate-400"}`}
+                      className={`text-sm font-semibold uppercase tracking-wider group-hover:text-slate-200 group-focus-visible:text-slate-200 ${scrollMark === 2 ? "text-slate-200" : "text-slate-600"}`}
                     >
-                      {" "}
                       projects
                     </span>
                   </a>
@@ -89,39 +88,68 @@ export default function HomePage() {
           </div>
           <ul className="flex items-center justify-start gap-4">
             <li className="cursor-pointer transition-all hover:text-slate-200">
-              <AiOutlineInstagram size={30} />
+              <a
+                href="https://github.com/hansenlimanta"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <AiOutlineGithub size={30} />
+              </a>
             </li>
             <li className="cursor-pointer transition-all hover:text-slate-200">
-              <AiOutlineLinkedin size={30} />
+              <a
+                href="https://www.linkedin.com/in/hansenlimanta/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <AiOutlineLinkedin size={30} />
+              </a>
             </li>
             <li className="cursor-pointer transition-all hover:text-slate-200">
-              <AiOutlineGithub size={30} />
+              <a
+                href="https://www.instagram.com/hansen_limanta/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <AiOutlineInstagram size={30} />
+              </a>
             </li>
             <li className="cursor-pointer transition-all hover:text-slate-200">
-              <AiOutlineMail size={30} />
+              <a
+                href="mailto:hansenlimanta@gmail.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <AiOutlineMail size={30} />
+              </a>
             </li>
           </ul>
         </header>
         <main className="flex w-1/2 flex-col gap-4 py-20 ">
           <section className="mb-32 flex flex-col gap-3 px-4" id="about">
             <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Necessitatibus consequuntur enim, provident, voluptate
-              reprehenderit, alias quia corrupti aspernatur distinctio
-              laudantium placeat libero ratione accusantium expedita quisquam
-              soluta quidem dolorum at error ea. Temporibus atque accusamus
-              ducimus corporis aliquam dolore! Eaque aperiam sequi omnis autem
-              laudantium ducimus totam repudiandae adipisci suscipit.
+              In 2019, I embarked on my web development journey, choosing to
+              major in Computer Science at Bina Nusantara University. The
+              culmination of this journey was my proud graduation in August
+              2023. This marked the beginning of my venture into coding, and
+              during my internship at Sagara Technology, I had the opportunity
+              to actively contribute to projects like the Sagara Foundation CSR
+              site. This experience became a defining moment, showcasing my
+              proficiency in Vue.js and honing my skills in crafting
+              user-friendly interfaces.
             </p>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore,
-              fugiat tempora. Ab, sunt praesentium. Labore totam doloremque
-              similique fuga excepturi impedit maxime sapiente tenetur itaque!
+              As part of the Midas Daya Teknologi team at Bank Muamalat
+              Indonesia, I currently shape the branch delivery system using
+              Vue.js and Java Spring Boot. Graduating wasn't just an academic
+              milestone; it marked the commencement of a dynamic journey where
+              clean, modular code meets perpetual curiosity for innovation.
             </p>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
-              repellat ducimus dignissimos aliquam rerum delectus odio minima?
-              Minima, animi perferendis!
+              Beyond the code, I find harmony in playing the piano and guitar, a
+              balance that fuels my belief in the symbiosis of creativity and
+              technology. This is not just a digital story—it's an invitation to
+              explore and collaborate on this exciting journey!
             </p>
           </section>
           <section
@@ -138,10 +166,13 @@ export default function HomePage() {
                     Fullstack Developer · Midas Daya Teknologi
                   </h2>
                   <p className="text-sm">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Dolorum facere optio, eum amet beatae placeat nobis id.
-                    Neque, asperiores veniam? Fugit odit qui voluptatibus
-                    repellendus non dolores rerum autem sequi?
+                    As a Midas Daya Teknologi employee at Bank Muamalat
+                    Indonesia, I develop and maintain the branch delivery system
+                    using Vue.js and Java Spring Boot. I create clean, modular,
+                    and testable code for both frontend and backend, promptly
+                    addressing bugs and performance issues. Staying current with
+                    the latest technologies and best practices, I contribute to
+                    the success and innovation of Bank Muamalat Indonesia.
                   </p>
                   <ul className="flex flex-wrap gap-2 ">
                     <li className="rounded-full bg-teal-400/10 px-3 py-1 text-xs text-teal-300">
@@ -167,17 +198,19 @@ export default function HomePage() {
               </div>
               <div className="group/exp flex gap-4 rounded-lg p-4 opacity-100 transition-all hover:cursor-pointer hover:bg-slate-800/50 hover:!opacity-100 hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] hover:drop-shadow-lg group-hover/parent:opacity-50">
                 <p className="mt-1 flex-1 text-sm font-semibold text-slate-500">
-                  2022 — 2023
+                  Oct — Dec 2022
                 </p>
                 <div className="flex flex-[3] flex-col gap-2">
                   <h2 className="font-semibold text-slate-200 transition-colors group-hover/exp:text-teal-300">
                     Frontend Developer · Sagara Technology
                   </h2>
                   <p className="text-sm">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Dolorum facere optio, eum amet beatae placeat nobis id.
-                    Neque, asperiores veniam? Fugit odit qui voluptatibus
-                    repellendus non dolores rerum autem sequi?
+                    I developed and maintained Vue.js frontends, including the
+                    Sagara Foundation CSR site, showcasing expertise in scalable
+                    and user-friendly interfaces. Implemented mobile-responsive
+                    features for improved user experience, collaborating with
+                    back-end developers and designers to enhance overall
+                    usability.
                   </p>
                   <ul className="flex flex-wrap gap-2 ">
                     <li className="rounded-full bg-teal-400/10 px-3 py-1 text-xs text-teal-300">
@@ -202,97 +235,44 @@ export default function HomePage() {
                 </div>
               </div>
             </div>
-            <div className="mt-8 inline-flex w-fit cursor-pointer items-center justify-start gap-2 px-4 font-semibold text-slate-200 transition-colors hover:text-teal-300">
+            <a
+              href="/resume.pdf"
+              target="_blank"
+              className="mt-8 inline-flex w-fit cursor-pointer items-center justify-start gap-2 px-4 font-semibold text-slate-200 transition-colors hover:text-teal-300"
+            >
               View Full Resume <MdArrowOutward size={20} />
-            </div>
+            </a>
           </section>
           <section
             className="mb-32 flex flex-col items-start justify-center gap-2"
             id="projects"
           >
             <div className="group/parent flex flex-col items-center justify-center gap-2 transition-all">
-              <div className="group/proj flex gap-4 rounded-lg p-4 opacity-100 transition-all hover:cursor-pointer hover:bg-slate-800/50 hover:!opacity-100 hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] hover:drop-shadow-lg group-hover/parent:opacity-50">
-                <div className="relative mt-1 h-1/3 w-full flex-1 overflow-hidden rounded border-2 border-slate-700 group-hover/proj:border-slate-400">
-                  <Image
-                    src={"/projects/notes1.jpg"}
-                    alt="personal notes"
-                    objectFit="cover"
-                    fill
-                  />
+              {projectsData.map((project) => (
+                <div className="group/proj flex gap-4 rounded-lg p-4 opacity-100 transition-all hover:cursor-pointer hover:bg-slate-800/50 hover:!opacity-100 hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] hover:drop-shadow-lg group-hover/parent:opacity-50">
+                  <div className="relative mt-1 h-20 w-full flex-1 overflow-hidden rounded border-2 border-slate-700 group-hover/proj:border-slate-400">
+                    <Image
+                      src={project.image}
+                      alt={project.title}
+                      objectFit="cover"
+                      fill
+                    />
+                  </div>
+                  <div className="flex flex-[3] flex-col gap-2">
+                    <h2 className="font-semibold text-slate-200 transition-colors group-hover/proj:text-teal-300">
+                      {project.title}
+                    </h2>
+                    <p className="text-sm">{project.desc}</p>
+                    <ul className="flex flex-wrap gap-2">
+                      {project.tools.map((tool) => (
+                        <li className="rounded-full bg-teal-400/10 px-3 py-1 text-xs text-teal-300">
+                          {tool}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 </div>
-                <div className="flex flex-[3] flex-col gap-2">
-                  <h2 className="font-semibold text-slate-200 transition-colors group-hover/proj:text-teal-300">
-                    Fullstack Developer · Midas Daya Teknologi
-                  </h2>
-                  <p className="text-sm">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Dolorum facere optio, eum amet beatae placeat nobis id.
-                    Neque, asperiores veniam? Fugit odit qui voluptatibus
-                    repellendus non dolores rerum autem sequi?
-                  </p>
-                  <ul className="flex flex-wrap gap-2 ">
-                    <li className="rounded-full bg-teal-400/10 px-3 py-1 text-xs text-teal-300">
-                      Vue
-                    </li>
-                    <li className="rounded-full bg-teal-400/10 px-3 py-1 text-xs text-teal-300">
-                      Vuetify
-                    </li>
-                    <li className="rounded-full bg-teal-400/10 px-3 py-1 text-xs text-teal-300">
-                      Java
-                    </li>
-                    <li className="rounded-full bg-teal-400/10 px-3 py-1 text-xs text-teal-300">
-                      Springboot
-                    </li>
-                    <li className="rounded-full bg-teal-400/10 px-3 py-1 text-xs text-teal-300">
-                      Vuex
-                    </li>
-                    <li className="rounded-full bg-teal-400/10 px-3 py-1 text-xs text-teal-300">
-                      Git
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div className="group/proj flex gap-4 rounded-lg p-4 opacity-100 transition-all hover:cursor-pointer hover:bg-slate-800/50 hover:!opacity-100 hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] hover:drop-shadow-lg group-hover/parent:opacity-50">
-                <div className="relative mt-1 h-1/3 w-full flex-1 overflow-hidden rounded border-2 border-slate-700 group-hover/proj:border-slate-400">
-                  <Image
-                    src={"/projects/music1.jpg"}
-                    alt="music player"
-                    objectFit="cover"
-                    fill
-                  />
-                </div>
-                <div className="flex flex-[3] flex-col gap-2">
-                  <h2 className="font-semibold text-slate-200 transition-colors group-hover/proj:text-teal-300">
-                    Frontend Developer · Sagara Technology
-                  </h2>
-                  <p className="text-sm">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Dolorum facere optio, eum amet beatae placeat nobis id.
-                    Neque, asperiores veniam? Fugit odit qui voluptatibus
-                    repellendus non dolores rerum autem sequi?
-                  </p>
-                  <ul className="flex flex-wrap gap-2 ">
-                    <li className="rounded-full bg-teal-400/10 px-3 py-1 text-xs text-teal-300">
-                      React
-                    </li>
-                    <li className="rounded-full bg-teal-400/10 px-3 py-1 text-xs text-teal-300">
-                      MUI
-                    </li>
-                    <li className="rounded-full bg-teal-400/10 px-3 py-1 text-xs text-teal-300">
-                      React Hook Form
-                    </li>
-                    <li className="rounded-full bg-teal-400/10 px-3 py-1 text-xs text-teal-300">
-                      NextJS
-                    </li>
-                    <li className="rounded-full bg-teal-400/10 px-3 py-1 text-xs text-teal-300">
-                      Styled Component
-                    </li>
-                    <li className="rounded-full bg-teal-400/10 px-3 py-1 text-xs text-teal-300">
-                      Figma
-                    </li>
-                  </ul>
-                </div>
-              </div>
+              ))}
             </div>
             <div className="mt-8 inline-flex w-fit cursor-pointer items-center justify-start gap-2 px-4 font-semibold text-slate-200 transition-colors hover:text-teal-300">
               View Full Project Archive <MdArrowOutward size={20} />
