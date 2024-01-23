@@ -5,7 +5,6 @@ const Navigation = () => {
   const [scrollMark, setScrollMark] = useState(0);
   const windowPosition = useWindowPosition();
   useEffect(() => {
-    console.log("test", windowPosition);
     if (windowPosition < 480) {
       setScrollMark(0);
     } else if (windowPosition < 1152) {

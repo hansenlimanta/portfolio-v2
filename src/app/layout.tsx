@@ -23,7 +23,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className="scroll-pt-20 scroll-smooth selection:bg-teal-300 selection:text-slate-900"
+      className="scroll-smooth selection:bg-teal-300 selection:text-slate-900"
     >
       <body className={`font-sans ${inter.variable}`}>{children}</body>
     </html>

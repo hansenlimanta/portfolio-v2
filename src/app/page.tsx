@@ -11,10 +11,10 @@ export default function HomePage() {
   return (
     <div className="relative flex min-h-screen flex-col items-center justify-start bg-slate-900 text-slate-400">
       <MouseHover />
-      <div className="mx-auto flex h-full max-w-screen-xl justify-center px-6 md:px-12 lg:px-24">
-        <header className="sticky top-0 flex max-h-screen  w-1/2 flex-col justify-between py-20">
-          <div className="flex flex-col">
-            <h1 className="text-5xl font-bold text-slate-200">
+      <div className="h-full px-6 md:px-12 lg:mx-auto lg:flex lg:max-w-screen-xl lg:justify-center lg:px-24">
+        <header className="pt-12 lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-1/2 lg:flex-col lg:justify-between lg:py-20">
+          <div className="mb-4 flex flex-col lg:m-0">
+            <h1 className="text-4xl font-bold text-slate-200 lg:text-5xl">
               Hansen Limanta
             </h1>
             <h2 className="mt-3 text-lg font-semibold text-slate-200">
@@ -28,8 +28,14 @@ export default function HomePage() {
           </div>
           <SocialLinks />
         </header>
-        <main className="flex w-1/2 flex-col gap-4 py-20 ">
-          <section className="mb-32 flex flex-col gap-3 px-4" id="about">
+        <main className="py-20 lg:flex lg:w-1/2 lg:flex-col lg:gap-4 ">
+          <section
+            className="mb-24 flex scroll-mt-16 flex-col gap-3 lg:scroll-mt-24 lg:px-4"
+            id="about"
+          >
+            <div className="sticky top-0 z-20 mb-4 bg-slate-900/75 py-5 font-bold uppercase text-slate-200 backdrop-blur lg:hidden">
+              <h2>about</h2>
+            </div>
             <p>
               In 2019, I embarked on my web development journey, choosing to
               major in Computer Science at Bina Nusantara University. The
@@ -56,24 +62,28 @@ export default function HomePage() {
             </p>
           </section>
           <section
-            className="mb-32 flex flex-col items-start justify-center gap-2"
+            className="mb-32 flex scroll-mt-16 flex-col justify-center gap-2 lg:scroll-mt-24 lg:items-start"
             id="experience"
           >
+            <div className="sticky top-0 z-20 mb-4 bg-slate-900/75 py-5 font-bold uppercase text-slate-200 backdrop-blur lg:hidden">
+              <h2>experience</h2>
+            </div>
             <div className="group/parent flex flex-col items-center justify-center gap-2 transition-all">
               {experienceData.map((exp) => (
-                <a
-                  href={exp.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group/exp flex gap-4 rounded-lg p-4 opacity-100 transition-all hover:cursor-pointer hover:bg-slate-800/50 hover:!opacity-100 hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] hover:drop-shadow-lg group-hover/parent:opacity-50"
-                >
+                <div className="group/exp relative flex flex-col gap-4 rounded-lg py-4 opacity-100 transition-all lg:flex-row lg:p-4 lg:hover:cursor-pointer lg:hover:bg-slate-800/50 lg:hover:!opacity-100 lg:hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:hover:drop-shadow-lg lg:group-hover/parent:opacity-50">
                   <p className="mt-1 flex-1 text-sm font-semibold text-slate-500">
                     {exp.date}
                   </p>
                   <div className="flex flex-[3] flex-col gap-2">
-                    <h2 className="font-semibold text-slate-200 transition-colors group-hover/exp:text-teal-300">
+                    <a
+                      href={exp.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-semibold text-slate-200 transition-colors lg:group-hover/exp:text-teal-300"
+                    >
+                      <span className="absolute -inset-x-0.5 -inset-y-0.5 hidden rounded lg:block"></span>
                       {exp.title}
-                    </h2>
+                    </a>
                     <p className="text-sm">{exp.desc}</p>
                     <ul className="flex flex-wrap gap-2 ">
                       {exp.tools.map((tool) => (
@@ -83,7 +93,7 @@ export default function HomePage() {
                       ))}
                     </ul>
                   </div>
-                </a>
+                </div>
               ))}
             </div>
             <a
@@ -95,18 +105,16 @@ export default function HomePage() {
             </a>
           </section>
           <section
-            className="mb-32 flex flex-col items-start justify-center gap-2"
+            className="mb-32 flex scroll-mt-16 flex-col justify-center gap-2 lg:scroll-mt-24 lg:items-start"
             id="projects"
           >
+            <div className="sticky top-0 z-20 mb-4 bg-slate-900/75 py-5 font-bold uppercase text-slate-200 backdrop-blur lg:hidden">
+              <h2>projects</h2>
+            </div>
             <div className="group/parent flex flex-col items-center justify-center gap-2 transition-all">
               {projectsData.map((project) => (
-                <a
-                  href={project.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group/proj flex gap-4 rounded-lg p-4 opacity-100 transition-all hover:cursor-pointer hover:bg-slate-800/50 hover:!opacity-100 hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] hover:drop-shadow-lg group-hover/parent:opacity-50"
-                >
-                  <div className="relative mt-1 h-20 w-full flex-1 overflow-hidden rounded border-2 border-slate-700 group-hover/proj:border-slate-400">
+                <div className="group/proj relative flex gap-4 rounded-lg py-4 opacity-100 transition-all lg:p-4 lg:hover:cursor-pointer lg:hover:bg-slate-800/50 lg:hover:!opacity-100 lg:hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:hover:drop-shadow-lg lg:group-hover/parent:opacity-50">
+                  <div className="relative mt-1 h-20 w-full flex-1 overflow-hidden rounded border-2 border-slate-700 lg:group-hover/proj:border-slate-400">
                     <Image
                       src={project.image}
                       alt={project.title}
@@ -115,9 +123,15 @@ export default function HomePage() {
                     />
                   </div>
                   <div className="flex flex-[3] flex-col gap-2">
-                    <h2 className="font-semibold text-slate-200 transition-colors group-hover/proj:text-teal-300">
+                    <a
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-semibold text-slate-200 transition-colors lg:group-hover/proj:text-teal-300"
+                    >
+                      <span className="absolute -inset-x-0.5 -inset-y-0.5 hidden rounded lg:block"></span>
                       {project.title}
-                    </h2>
+                    </a>
                     <p className="text-sm">{project.desc}</p>
                     <ul className="flex flex-wrap gap-2">
                       {project.tools.map((tool) => (
@@ -127,7 +141,7 @@ export default function HomePage() {
                       ))}
                     </ul>
                   </div>
-                </a>
+                </div>
               ))}
             </div>
             <div className="mt-8 inline-flex w-fit cursor-pointer items-center justify-start gap-2 px-4 font-semibold text-slate-200 transition-colors hover:text-teal-300">
