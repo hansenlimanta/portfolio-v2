@@ -28,9 +28,9 @@ export default function HomePage() {
           </div>
           <SocialLinks />
         </header>
-        <main className="py-20 lg:flex lg:w-1/2 lg:flex-col lg:gap-4 ">
+        <main className="pb-8 pt-20 lg:flex lg:w-1/2 lg:flex-col lg:gap-4 ">
           <section
-            className="mb-24 flex scroll-mt-16 flex-col gap-3 lg:scroll-mt-24 lg:px-4"
+            className="mb-24 flex scroll-mt-16 flex-col gap-3 lg:scroll-mt-20 lg:px-4"
             id="about"
           >
             <div className="sticky top-0 z-20 mb-4 bg-slate-900/75 py-5 font-bold uppercase text-slate-200 backdrop-blur lg:hidden">
@@ -62,7 +62,7 @@ export default function HomePage() {
             </p>
           </section>
           <section
-            className="mb-32 flex scroll-mt-16 flex-col justify-center gap-2 lg:scroll-mt-24 lg:items-start"
+            className="mb-32 flex scroll-mt-16 flex-col justify-center gap-2 lg:scroll-mt-20 lg:items-start"
             id="experience"
           >
             <div className="sticky top-0 z-20 mb-4 bg-slate-900/75 py-5 font-bold uppercase text-slate-200 backdrop-blur lg:hidden">
@@ -105,7 +105,7 @@ export default function HomePage() {
             </a>
           </section>
           <section
-            className="mb-32 flex scroll-mt-16 flex-col justify-center gap-2 lg:scroll-mt-24 lg:items-start"
+            className="mb-32 flex scroll-mt-16 flex-col justify-center gap-2 lg:scroll-mt-20 lg:items-start"
             id="projects"
           >
             <div className="sticky top-0 z-20 mb-4 bg-slate-900/75 py-5 font-bold uppercase text-slate-200 backdrop-blur lg:hidden">
@@ -147,6 +147,21 @@ export default function HomePage() {
             <div className="mt-8 inline-flex w-fit cursor-pointer items-center justify-start gap-2 px-4 font-semibold text-slate-200 transition-colors hover:text-teal-300">
               View Full Project Archive <MdArrowOutward size={20} />
             </div>
+            <p className="mt-20 px-4">
+              This portfolio is inspired by the design and structure of{" "}
+              <span>
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="http://www.brittanychiang.com"
+                  className="text-slate-200 transition-all hover:text-teal-300"
+                >
+                  Brittany Chiang's Portfolio
+                </a>
+              </span>
+              . The objective is to reverse engineer aspects of the website to
+              gain insights into its layout, style, and functionality.
+            </p>
           </section>
         </main>
       </div>
