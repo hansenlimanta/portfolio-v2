@@ -69,8 +69,11 @@ export default function HomePage() {
               <h2>experience</h2>
             </div>
             <div className="group/parent flex flex-col items-center justify-center gap-2 transition-all">
-              {experienceData.map((exp) => (
-                <div className="group/exp relative flex flex-col gap-4 rounded-lg py-4 opacity-100 transition-all lg:flex-row lg:p-4 lg:hover:cursor-pointer lg:hover:bg-slate-800/50 lg:hover:!opacity-100 lg:hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:hover:drop-shadow-lg lg:group-hover/parent:opacity-50">
+              {experienceData.map((exp, index) => (
+                <div
+                  key={index}
+                  className="group/exp relative flex flex-col gap-4 rounded-lg py-4 opacity-100 transition-all lg:flex-row lg:p-4 lg:hover:cursor-pointer lg:hover:bg-slate-800/50 lg:hover:!opacity-100 lg:hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:hover:drop-shadow-lg lg:group-hover/parent:opacity-50"
+                >
                   <p className="mt-1 flex-1 text-sm font-semibold text-slate-500">
                     {exp.date}
                   </p>
@@ -86,8 +89,11 @@ export default function HomePage() {
                     </a>
                     <p className="text-sm">{exp.desc}</p>
                     <ul className="flex flex-wrap gap-2 ">
-                      {exp.tools.map((tool) => (
-                        <li className="rounded-full bg-teal-400/10 px-3 py-1 text-xs text-teal-300">
+                      {exp.tools.map((tool, index) => (
+                        <li
+                          key={index}
+                          className="rounded-full bg-teal-400/10 px-3 py-1 text-xs text-teal-300"
+                        >
                           {tool}
                         </li>
                       ))}
@@ -112,14 +118,20 @@ export default function HomePage() {
               <h2>projects</h2>
             </div>
             <div className="group/parent flex flex-col items-center justify-center gap-2 transition-all">
-              {projectsData.map((project) => (
-                <div className="group/proj relative flex gap-4 rounded-lg py-4 opacity-100 transition-all lg:p-4 lg:hover:cursor-pointer lg:hover:bg-slate-800/50 lg:hover:!opacity-100 lg:hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:hover:drop-shadow-lg lg:group-hover/parent:opacity-50">
+              {projectsData.map((project, index) => (
+                <div
+                  key={index}
+                  className="group/proj relative flex gap-4 rounded-lg py-4 opacity-100 transition-all lg:p-4 lg:hover:cursor-pointer lg:hover:bg-slate-800/50 lg:hover:!opacity-100 lg:hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:hover:drop-shadow-lg lg:group-hover/parent:opacity-50"
+                >
                   <div className="relative mt-1 h-20 w-full flex-1 overflow-hidden rounded border-2 border-slate-700 lg:group-hover/proj:border-slate-400">
                     <Image
                       src={project.image}
                       alt={project.title}
-                      objectFit="cover"
-                      fill
+                      style={{ objectFit: "cover" }}
+                      width="0"
+                      height="0"
+                      sizes="100vw"
+                      className="h-full w-auto"
                     />
                   </div>
                   <div className="flex flex-[3] flex-col gap-2">
@@ -134,8 +146,11 @@ export default function HomePage() {
                     </a>
                     <p className="text-sm">{project.desc}</p>
                     <ul className="flex flex-wrap gap-2">
-                      {project.tools.map((tool) => (
-                        <li className="rounded-full bg-teal-400/10 px-3 py-1 text-xs text-teal-300">
+                      {project.tools.map((tool, index) => (
+                        <li
+                          key={index}
+                          className="rounded-full bg-teal-400/10 px-3 py-1 text-xs text-teal-300"
+                        >
                           {tool}
                         </li>
                       ))}

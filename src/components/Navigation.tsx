@@ -19,7 +19,7 @@ const Navigation = () => {
         <li>
           <a href="#about" className="group flex items-center py-3">
             <span
-              className={`mr-4 h-px w-8 bg-slate-600 transition-all group-hover:h-[2px] group-hover:w-16 group-hover:bg-slate-200 group-focus-visible:h-[2px] group-focus-visible:w-16 group-focus-visible:bg-slate-200 ${scrollMark === 0 ? "h-[2px] w-16 bg-slate-200" : "h-px w-8 bg-slate-600"}`}
+              className={`mr-4 transition-all group-hover:h-[2px] group-hover:w-16 group-hover:bg-slate-200 group-focus-visible:h-[2px] group-focus-visible:w-16 group-focus-visible:bg-slate-200 ${scrollMark === 0 ? "h-[2px] w-16 bg-slate-200" : "h-px w-8 bg-slate-600"}`}
             ></span>
             <span
               className={`text-sm font-semibold uppercase tracking-wider group-hover:text-slate-200 group-focus-visible:text-slate-200 ${scrollMark === 0 ? "text-slate-200" : "text-slate-600"}`}
@@ -31,7 +31,7 @@ const Navigation = () => {
         <li>
           <a href="#experience" className="group flex items-center py-3">
             <span
-              className={`mr-4 h-px w-8 bg-slate-600 transition-all group-hover:h-[2px] group-hover:w-16 group-hover:bg-slate-200 group-focus-visible:h-[2px] group-focus-visible:w-16 group-focus-visible:bg-slate-200 ${scrollMark === 1 ? "h-[2px] w-16 bg-slate-200" : "h-px w-8 bg-slate-600"}`}
+              className={`mr-4 transition-all group-hover:h-[2px] group-hover:w-16 group-hover:bg-slate-200 group-focus-visible:h-[2px] group-focus-visible:w-16 group-focus-visible:bg-slate-200 ${scrollMark === 1 ? "h-[2px] w-16 bg-slate-200" : "h-px w-8 bg-slate-600"}`}
             ></span>
             <span
               className={`text-sm font-semibold uppercase tracking-wider group-hover:text-slate-200 group-focus-visible:text-slate-200 ${scrollMark === 1 ? "text-slate-200" : "text-slate-600"}`}
@@ -43,7 +43,7 @@ const Navigation = () => {
         <li>
           <a href="#projects" className="group flex items-center py-3">
             <span
-              className={`mr-4 h-px w-8 bg-slate-600 transition-all group-hover:h-[2px] group-hover:w-16 group-hover:bg-slate-200 group-focus-visible:h-[2px] group-focus-visible:w-16 group-focus-visible:bg-slate-200 ${scrollMark === 2 ? "h-[2px] w-16 bg-slate-200" : "h-px w-8 bg-slate-600"}`}
+              className={`mr-4 transition-all group-hover:h-[2px] group-hover:w-16 group-hover:bg-slate-200 group-focus-visible:h-[2px] group-focus-visible:w-16 group-focus-visible:bg-slate-200 ${scrollMark === 2 ? "h-[2px] w-16 bg-slate-200" : "h-px w-8 bg-slate-600"}`}
             ></span>
             <span
               className={`text-sm font-semibold uppercase tracking-wider group-hover:text-slate-200 group-focus-visible:text-slate-200 ${scrollMark === 2 ? "text-slate-200" : "text-slate-600"}`}
