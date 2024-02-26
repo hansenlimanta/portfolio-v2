@@ -51,6 +51,7 @@ npm run dev
 
 ## Technologies Used
 - Next.js
+- Typescript
 - Tailwind CSS
 
 ## Contact
