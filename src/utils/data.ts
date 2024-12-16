@@ -46,7 +46,7 @@ export const projectsData = [
   {
     title: "Portfolio V1",
     tools: ["Next.js", "Emotion", "Framer Motion"],
-    link: "https://www.hansenlimanta.com/",
+    link: "https://v1.hansenlimanta.com/",
     image: "/projects/portfolio-v1.webp",
     desc: `This project serves as a showcase of my skills, projects, and experiences. It consists of four main pages: Home, About, Experience, and Playground. Explore the various sections to learn more about me and my work.`,
     github: "https://github.com/hansenlimanta/portfolio-v1",
